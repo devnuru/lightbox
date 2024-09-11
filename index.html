@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Light Box</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+
+	<svg class="d-none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="enlarge" viewBox="0 0 16 16">
+    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+  </symbol>
+  <symbol id="exit" viewBox="0 0 16 16">
+    <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
+  </symbol>
+</svg>
+
+<h1 class="text-center mb-0">View My All Certificates</h1>
+<p class="text-center mb-4">Click an image to reveal the lightbox</p>
+
+<section class="photo-gallery">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4 gallery-grid">
+        <div class="col cert-card">
+        <a class="cert-gallery-item" href="hello.jpg">
+          <img src="hello.jpg" class="img-fluid" alt="Ipsum lorem dolor sit amet">
+        </a>
+        <a href="#"> <h4>Website Design and Developement Certificate</h4></a>
+       <p class="fw-bolder">FreeCodeCamp</p>
+   
+      </div>
+      <div class="col cert-card">
+        <a class="cert-gallery-item" href="hello.jpg">
+          <img src="hello.jpg" class="img-fluid" alt="Ipsum lorem dolor sit amet">
+        </a>
+       <div>
+       	<a href="#"> <h4>Website Design and Developement Certificate</h4></a>
+       <p class="fw-bolder">FreeCodeCamp</p>
+       </div>
+      </div>
+         <div class="col cert-card">
+        <a class="cert-gallery-item" href="hello.jpg">
+          <img src="hello.jpg" class="img-fluid" alt="Ipsum lorem dolor sit amet">
+        </a>
+       <div>
+       	<a href="#"> <h4>Website Design and Developement Certificate</h4></a>
+       <p class="fw-bolder">FreeCodeCamp</p>
+       </div>
+      </div>
+         <div class="col cert-card">
+        <a class="cert-gallery-item" href="hello.jpg">
+          <img src="hello.jpg" class="img-fluid" alt="Ipsum lorem dolor sit amet">
+        </a>
+       <div>
+       	<a href="#"> <h4>Website Design and Developement Certificate</h4></a>
+       <p class="fw-bolder">FreeCodeCamp</p>
+       </div>
+      </div>
+
+      
+ 
+      
+
+    </div>
+  </div>
+</section>
+
+<div class="modal fade lightbox-modal" id="lightbox-modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+    <div class="modal-content">
+      <button type="button" class="btn-fullscreen-enlarge" aria-label="Enlarge fullscreen">
+        <svg class="bi"><use href="#enlarge"></use></svg>
+      </button>
+      <button type="button" class="btn-fullscreen-exit d-none" aria-label="Exit fullscreen">
+        <svg class="bi"><use href="#exit"></use></svg>
+      </button>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body">
+        <div class="lightbox-content">
+          <!-- JS content here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
